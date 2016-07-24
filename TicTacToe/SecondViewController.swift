@@ -30,7 +30,6 @@ class SecondViewController: UIViewController {
     
     //Initializing an array of type GridLabel
     var labelsArray = [GridLabel]()
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,48 +45,46 @@ class SecondViewController: UIViewController {
     }
     
     
-    //Win Logic
+    
     func checkWinner() {
         
-        print("Check Winner Called")
+        //AI Logic
         
+        
+        
+        
+        
+        
+        
+        
+        
+        //Win Logic
         var lastPlayer = ""
         
         //Reversed players already. This works.
         if xTurn != true {
-            print("Setting X")
 
             lastPlayer = "X"
         }
         else {
-            print("Setting O")
             lastPlayer = "O"
             
         }
-        
-        
         
         let solutionsArray : [(Int, Int, Int)] = [(0,3,6),(1,4,7),(2,5,8),(0,1,2),(3,4,5),(6,7,8),(0,4,8),(6,4,2)]
         
         moveCounter += 1
         
         for solution in solutionsArray {
-            print("Checking \(solution)")
-            
-            
-            
+
             if labelsArray[solution.0].text == lastPlayer && labelsArray[solution.1].text == lastPlayer && labelsArray[solution.2].text == lastPlayer {
-                print("3 things in a row")
                 
                 //Call winMessage
                 winMessage(lastPlayer)
                 gameOverFlag = true
     
             }
-            
-            print(moveCounter)
-            print(gameOverFlag)
-            print("Inside checkingWin")
+
             if moveCounter == 9 && gameOverFlag == false {
                 tieMessage()
             }
@@ -95,9 +92,6 @@ class SecondViewController: UIViewController {
         }
     
     }
-     
-    
-
     
     @IBAction func onTappedGridLabel(sender: UITapGestureRecognizer) {
         
@@ -141,10 +135,7 @@ class SecondViewController: UIViewController {
 
     
     func winMessage(value: String) {
-        
-        print("Win Message Called")
 
-        
         let message = "\(value) wins."
         let alert = UIAlertController(title: "Win", message: message, preferredStyle: .Alert)
         alert.addAction(UIAlertAction(title: "Ok.", style: .Destructive, handler: nil))

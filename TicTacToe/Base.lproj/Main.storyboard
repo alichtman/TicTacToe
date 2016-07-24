@@ -36,9 +36,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="6Wk-7S-PE0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="SCd-Cy-roJ"/>
                             <constraint firstItem="6Wk-7S-PE0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="YAh-du-760"/>
                             <constraint firstItem="6Wk-7S-PE0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cu4-z5-ja0"/>
                             <constraint firstItem="6Wk-7S-PE0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hnF-j2-EyH"/>
+                            <constraint firstItem="6Wk-7S-PE0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oeG-3E-E0m"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
