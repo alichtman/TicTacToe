@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -63,7 +62,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="vRg-Il-XRn">
                                 <rect key="frame" x="-1" y="0.0" width="376" height="667"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ev0-fy-JVJ">
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ev0-fy-JVJ">
                                 <rect key="frame" x="31" y="178" width="312" height="312"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2An-US-10F" customClass="GridLabel" customModule="TicTacToe" customModuleProvider="target">
@@ -127,7 +126,7 @@
                                     <outletCollection property="gestureRecognizers" destination="kAE-0L-fjM" appends="YES" id="sPG-rl-put"/>
                                 </connections>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cBx-42-uwq">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cBx-42-uwq">
                                 <rect key="frame" x="276" y="545" width="39" height="30"/>
                                 <state key="normal" title="Reset"/>
                                 <connections>
@@ -138,15 +137,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="ev0-fy-JVJ" firstAttribute="leading" secondItem="T08-mo-eoA" secondAttribute="leadingMargin" constant="15" id="8bE-i7-fO1"/>
-                            <constraint firstItem="vRg-Il-XRn" firstAttribute="centerX" secondItem="T08-mo-eoA" secondAttribute="centerX" id="JwB-9V-Zzc"/>
-                            <constraint firstItem="ev0-fy-JVJ" firstAttribute="centerX" secondItem="T08-mo-eoA" secondAttribute="centerX" id="PUr-rO-aNE"/>
-                            <constraint firstItem="ev0-fy-JVJ" firstAttribute="trailing" secondItem="cBx-42-uwq" secondAttribute="trailing" id="Qdc-Eb-kSL"/>
-                            <constraint firstItem="cBx-42-uwq" firstAttribute="top" secondItem="ev0-fy-JVJ" secondAttribute="bottom" constant="55" id="RTe-dL-Faf"/>
-                            <constraint firstItem="vRg-Il-XRn" firstAttribute="centerX" secondItem="T08-mo-eoA" secondAttribute="centerX" id="XQt-Ca-skD"/>
-                            <constraint firstItem="ev0-fy-JVJ" firstAttribute="centerY" secondItem="T08-mo-eoA" secondAttribute="centerY" id="YRo-QZ-irp"/>
-                            <constraint firstItem="ev0-fy-JVJ" firstAttribute="top" secondItem="JLI-SW-31O" secondAttribute="bottom" constant="158" id="myJ-Bs-SFT"/>
-                            <constraint firstItem="vRg-Il-XRn" firstAttribute="centerY" secondItem="T08-mo-eoA" secondAttribute="centerY" id="x7q-A2-ZSC"/>
+                            <constraint firstItem="vRg-Il-XRn" firstAttribute="centerY" secondItem="T08-mo-eoA" secondAttribute="centerY" id="BRB-bX-B1k"/>
+                            <constraint firstItem="ev0-fy-JVJ" firstAttribute="centerY" secondItem="T08-mo-eoA" secondAttribute="centerY" id="HLk-Hg-Pb8"/>
+                            <constraint firstItem="ev0-fy-JVJ" firstAttribute="centerX" secondItem="T08-mo-eoA" secondAttribute="centerX" id="kai-D9-YuE"/>
+                            <constraint firstItem="vRg-Il-XRn" firstAttribute="centerX" secondItem="T08-mo-eoA" secondAttribute="centerX" id="nYy-FE-PI9"/>
                         </constraints>
                     </view>
                     <connections>
