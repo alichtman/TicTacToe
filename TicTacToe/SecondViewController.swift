@@ -56,9 +56,10 @@ class SecondViewController: UIViewController {
         
         
         
-        
-        
         //Win Logic
+        
+        
+        
         var lastPlayer = ""
         
         //Reversed players already. This works.
@@ -90,10 +91,13 @@ class SecondViewController: UIViewController {
             }
             
         }
+            
     
     }
     
     @IBAction func onTappedGridLabel(sender: UITapGestureRecognizer) {
+        
+        if gameOverFlag == false {
         
         //Run through each label in labelsArray. 
         var counter = 0
@@ -115,6 +119,7 @@ class SecondViewController: UIViewController {
                     }
                     xTurn = !xTurn
                 }
+            }
             }
         }
         
