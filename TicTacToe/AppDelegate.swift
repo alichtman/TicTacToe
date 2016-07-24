@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  TicTacToe
 //
-//  Created by Aaron Lichtman on 7/21/16.
+//  Created by Aaron Lichtman and Alex I. on 7/21/16.
 //  Copyright © 2016 Aaron Lichtman. All rights reserved.
 //
 

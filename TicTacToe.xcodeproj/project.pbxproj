@@ -14,6 +14,8 @@
 		127119401D41525C00706D0E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1271193E1D41525C00706D0E /* LaunchScreen.storyboard */; };
 		1271194B1D41525D00706D0E /* TicTacToeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1271194A1D41525D00706D0E /* TicTacToeTests.swift */; };
 		127119561D41525D00706D0E /* TicTacToeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127119551D41525D00706D0E /* TicTacToeUITests.swift */; };
+		127119641D41555E00706D0E /* GridLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127119631D41555E00706D0E /* GridLabel.swift */; };
+		127119661D41572E00706D0E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127119651D41572E00706D0E /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		127119511D41525D00706D0E /* TicTacToeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TicTacToeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		127119551D41525D00706D0E /* TicTacToeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeUITests.swift; sourceTree = "<group>"; };
 		127119571D41525D00706D0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		127119631D41555E00706D0E /* GridLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridLabel.swift; sourceTree = "<group>"; };
+		127119651D41572E00706D0E /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +102,10 @@
 			isa = PBXGroup;
 			children = (
 				127119351D41525C00706D0E /* AppDelegate.swift */,
+				127119651D41572E00706D0E /* SecondViewController.swift */,
 				127119371D41525C00706D0E /* ViewController.swift */,
 				127119391D41525C00706D0E /* Main.storyboard */,
+				127119631D41555E00706D0E /* GridLabel.swift */,
 				1271193C1D41525C00706D0E /* Assets.xcassets */,
 				1271193E1D41525C00706D0E /* LaunchScreen.storyboard */,
 				127119411D41525C00706D0E /* Info.plist */,
@@ -256,6 +262,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				127119661D41572E00706D0E /* SecondViewController.swift in Sources */,
+				127119641D41555E00706D0E /* GridLabel.swift in Sources */,
 				127119381D41525C00706D0E /* ViewController.swift in Sources */,
 				127119361D41525C00706D0E /* AppDelegate.swift in Sources */,
 			);
