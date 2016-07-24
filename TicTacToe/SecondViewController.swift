@@ -45,20 +45,9 @@ class SecondViewController: UIViewController {
     }
     
     
-    
     func checkWinner() {
         
-        //AI Logic
-        
-        
-        
-        
-        
-        
-        
         //Win Logic
-        
-        
         
         var lastPlayer = ""
         
@@ -160,4 +149,3 @@ class SecondViewController: UIViewController {
     
 
 }
- 
