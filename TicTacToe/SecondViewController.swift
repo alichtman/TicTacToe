@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class SecondViewController: UIViewController { 
 
     @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var gridLabel0: GridLabel!
