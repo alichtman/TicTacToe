@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController { 
+class SecondViewController: UIViewController {
 
     @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var gridLabel0: GridLabel!
@@ -23,9 +23,8 @@ class SecondViewController: UIViewController {
     
     //X will go first
     var xTurn = true
-    
+    var winner = ""
     var gameOverFlag = false
-    
     var moveCounter = 0
     
     //Initializing an array of type GridLabel
@@ -41,14 +40,16 @@ class SecondViewController: UIViewController {
             
             item.text = ""
         }
-        
     }
-    
     
     func checkWinner() {
         
-        //Win Logic
+        print("Checking winner")
+
+        print(moveCounter)
+        print(gameOverFlag)
         
+        //Win Logic
         var lastPlayer = ""
         
         //Reversed players already. This works.
@@ -58,7 +59,6 @@ class SecondViewController: UIViewController {
         }
         else {
             lastPlayer = "O"
-            
         }
         
         let solutionsArray : [(Int, Int, Int)] = [(0,3,6),(1,4,7),(2,5,8),(0,1,2),(3,4,5),(6,7,8),(0,4,8),(6,4,2)]
@@ -72,24 +72,25 @@ class SecondViewController: UIViewController {
                 //Call winMessage
                 winMessage(lastPlayer)
                 gameOverFlag = true
-    
-            }
+                
+                }
 
             if moveCounter == 9 && gameOverFlag == false {
+                gameOverFlag = true
+                
+                print("Tie Game Called")
+                print(moveCounter)
+                print(gameOverFlag)
                 tieMessage()
             }
-            
         }
-            
-    
     }
     
     @IBAction func onTappedGridLabel(sender: UITapGestureRecognizer) {
         
         if gameOverFlag == false {
         
-        //Run through each label in labelsArray. 
-        var counter = 0
+        //Run through each label in labelsArray.
         for label in labelsArray {
             
             //Figure out whether to place an X or an O.
@@ -101,44 +102,36 @@ class SecondViewController: UIViewController {
                     //Turn logic
                     if xTurn == true {
                         label.text = "X"
-                        counter += 1
                     }
                     else if xTurn != true {
                         label.text = "O"
                     }
                     xTurn = !xTurn
+                    }
                 }
             }
-            }
         }
-        
         //Win detection
-        //Return a value (winner)
-        
         checkWinner()
-        
     }
     
     @IBAction func onButtonPressReset(sender: AnyObject) {
-        viewDidLoad()
+        for item in labelsArray {
+            item.text = ""
+        }
         xTurn = true
+        gameOverFlag = false
+        moveCounter = 0
     }
     
-    //This line is to make the compiler happy.
-    var winner = ""
-
-    
     func winMessage(value: String) {
-
         let message = "\(value) wins."
         let alert = UIAlertController(title: "Win", message: message, preferredStyle: .Alert)
         alert.addAction(UIAlertAction(title: "Ok.", style: .Destructive, handler: nil))
         self.presentViewController(alert, animated: true, completion: nil)
     }
     
-    
     //Cat's game message
-    
     func tieMessage() {
         
         let message = "Nobody wins."
@@ -146,6 +139,4 @@ class SecondViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Ok.", style: .Destructive, handler: nil))
         self.presentViewController(alert, animated: true, completion: nil)
     }
-    
-
 }
