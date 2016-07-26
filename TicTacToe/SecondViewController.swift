@@ -45,7 +45,6 @@ class SecondViewController: UIViewController {
     func checkWinner() {
         
         print("Checking winner")
-
         print(moveCounter)
         print(gameOverFlag)
         
@@ -54,7 +53,6 @@ class SecondViewController: UIViewController {
         
         //Reversed players already. This works.
         if xTurn != true {
-
             lastPlayer = "X"
         }
         else {
@@ -62,9 +60,6 @@ class SecondViewController: UIViewController {
         }
         
         let solutionsArray : [(Int, Int, Int)] = [(0,3,6),(1,4,7),(2,5,8),(0,1,2),(3,4,5),(6,7,8),(0,4,8),(6,4,2)]
-        
-        moveCounter += 1
-        
         for solution in solutionsArray {
 
             if labelsArray[solution.0].text == lastPlayer && labelsArray[solution.1].text == lastPlayer && labelsArray[solution.2].text == lastPlayer {
@@ -72,24 +67,22 @@ class SecondViewController: UIViewController {
                 //Call winMessage
                 winMessage(lastPlayer)
                 gameOverFlag = true
-                
                 }
+        }
 
-            if moveCounter == 9 && gameOverFlag == false {
-                gameOverFlag = true
-                
-                print("Tie Game Called")
-                print(moveCounter)
-                print(gameOverFlag)
-                tieMessage()
-            }
+        if moveCounter == 9 && gameOverFlag == false {
+            gameOverFlag = true
+            
+            print("Tie Game Called")
+            print(moveCounter)
+            print(gameOverFlag)
+            tieMessage()
         }
     }
     
     @IBAction func onTappedGridLabel(sender: UITapGestureRecognizer) {
         
         if gameOverFlag == false {
-        
         //Run through each label in labelsArray.
         for label in labelsArray {
             
@@ -106,15 +99,18 @@ class SecondViewController: UIViewController {
                     else if xTurn != true {
                         label.text = "O"
                     }
+                    //Change turns
                     xTurn = !xTurn
+                    moveCounter += 1
                     }
                 }
             }
         }
-        //Win detection
+        //Call win detection function
         checkWinner()
     }
     
+    //Reset button
     @IBAction func onButtonPressReset(sender: AnyObject) {
         for item in labelsArray {
             item.text = ""
@@ -124,6 +120,7 @@ class SecondViewController: UIViewController {
         moveCounter = 0
     }
     
+    //Win Message
     func winMessage(value: String) {
         let message = "\(value) wins."
         let alert = UIAlertController(title: "Win", message: message, preferredStyle: .Alert)
